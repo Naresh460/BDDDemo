@@ -7,10 +7,10 @@ import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-	features = "D:\\Projects\\BDDproject\\Features\\AddEmployee.feature",
-	glue = {"com.stepdefination"}	,
+	features = ".\\src\\main\\resources\\login.feature",
+	glue = "com.stepdefination"	,
 	monochrome = true,
-			plugin = {"html:target/HTML.html"} ,
+	plugin = {"html:target/HTML.html"} ,
 	dryRun=false
 	 
 		
