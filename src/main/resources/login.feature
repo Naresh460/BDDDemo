@@ -13,8 +13,7 @@ Feature: LoginPage Testing
   
    Scenario: Verify the Login
    Given user in login Page
-   When enter username and password and loggedin
-   
+   When enter username and password and loggedin   
    Then verify Homepage
    
  

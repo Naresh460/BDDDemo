@@ -7,10 +7,10 @@ import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-	features = ".\\src\\main\\resources\\login.feature",
+	features = ".\\src\\main\\resources\\Homepage.feature",
 	glue = "com.stepdefination"	,
 	monochrome = true,
-	plugin = {"html:target/HTML.html"} ,
+	plugin = {"pretty","com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"},
 	dryRun=false
 	 
 		

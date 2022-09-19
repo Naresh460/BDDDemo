@@ -16,6 +16,11 @@ public class HomePage extends Base {
 
 	@FindBy(xpath = "//button[@type='submit']")
 	WebElement searchBtn;
+	
+	@FindBy(xpath="//div[@class='orangehrm-header-container']/button")
+	WebElement addButton;
+	
+	
 
 	public HomePage() {
 		PageFactory.initElements(driver, this);
@@ -24,4 +29,20 @@ public class HomePage extends Base {
 	public boolean verifyHomePage() {
 		return homePageverification.isDisplayed();
 	}
+	
+	public void enterID(String id) {
+	      employeeIdBox.sendKeys(id);
+	}
+	
+	public SearchResultsPage clickSearchBtn() {
+		searchBtn.click();
+		return new SearchResultsPage();
+	}
+	
+	public AddEmployee addBtn() {
+		addButton.click();
+		return new AddEmployee();
+	}
+	
+	
 }
